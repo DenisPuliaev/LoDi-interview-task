@@ -81,7 +81,7 @@ export const getSubmitions = createAsyncThunk(
 );
 
 export const initModal = createAsyncThunk(
-  "questionnaire/init",
+  "questionnaire/initModal",
   async (_, { getState }) => {
     const showAgain = getShowAgain();
 
@@ -106,7 +106,7 @@ export const initModal = createAsyncThunk(
 );
 
 export const removeQuestionnaire = createAsyncThunk(
-  "questionnaire/init",
+  "questionnaire/remove",
   async (id, { dispatch }) => {
     try {
       await questionnaireAPI.removeQuestionnaire(id);
