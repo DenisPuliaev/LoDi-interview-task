@@ -1,16 +1,16 @@
 import React from "react";
 import { ReactComponent as CheckmarkIcon } from "../assets/CheckmarkIconGray.svg";
 import { useDispatch, useSelector } from "react-redux";
+import Modal from "./Modal";
+import QuestionnaireOptions from "./QuestionnaireOptions";
+import QuestionnaireNav from "./QuestionnaireNav";
+import { useQuestionnaireFlow } from "../hooks/questionnaire";
 import {
   selectQuestionnaire,
   setShowModal,
   sendAnswers,
 } from "../store/questionnaireSlice";
-import Modal from "./Modal";
-import QuestionnaireOptions from "./QuestionnaireList";
-import { useQuestionnaireFlow } from "../hooks/questionnaire";
 import { setShowAgain } from "../utils/questionnaireModal";
-import QuestionnaireNav from "./QuestionnaireNav";
 
 const QuestionnaireModal = () => {
   const dispatch = useDispatch();
